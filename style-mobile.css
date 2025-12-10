@@ -1,0 +1,2664 @@
+/* =====================================
+   Mobile Styles (768px and below)
+   ===================================== */
+
+/* Reset */
+html,
+body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Content - add padding for fixed header */
+.main-content {
+    padding-top: 60px;
+}
+
+/* =====================================
+   Header Styles
+   ===================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 60px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.header-logo {
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    width: 140px;
+    height: 40px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Hide tagline and CTA on mobile */
+.header-tagline,
+.header-cta {
+    display: none;
+}
+
+/* MENU Button */
+.header-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #00B1B2;
+}
+
+.btn-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 2px;
+}
+
+.menu-lines span {
+    width: 20px;
+    height: 2px;
+    background-color: #FFFFFF;
+    display: block;
+}
+
+.menu-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.36px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* =====================================
+   FV Section
+   ===================================== */
+.fv-section {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+}
+
+/* Background */
+.fv-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 300px;
+    overflow: hidden;
+}
+
+.fv-bg-slide {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fv-bg-slide.active {
+    opacity: 1;
+}
+
+.fv-bg-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* Cloud Content Background */
+.fv-contents-bg {
+    position: absolute;
+    left: 40px;
+    top: 254px;
+    width: 300px;
+    height: 200px;
+    z-index: 10;
+}
+
+.fv-contents-bg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Main Text */
+.fv-text {
+    position: absolute;
+    left: 50%;
+    top: 328px;
+    transform: translateX(-50%);
+    z-index: 20;
+    text-align: center;
+    width: 100%;
+}
+
+.fv-text-1 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.54px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.text-bold-large {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.6px;
+}
+
+.text-medium {
+    font-size: 14px;
+}
+
+.fv-text-2 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.42px;
+    line-height: 1.2;
+    margin: 7px 0 0 0;
+}
+
+.fv-text-3 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.42px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Sub Text */
+.fv-subtext {
+    position: absolute;
+    left: 50%;
+    top: 504px;
+    transform: translateX(-50%);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.36px;
+    line-height: 1.6;
+    text-align: center;
+    z-index: 20;
+    white-space: nowrap;
+}
+
+/* Decorations (Fork & Spoon) */
+.fv-decorations {
+    position: absolute;
+    left: 147px;
+    top: 228px;
+    z-index: 15;
+}
+
+.deco-1 {
+    position: absolute;
+    left: 0;
+    top: 5.5px;
+    width: 84px;
+    height: 84.5px;
+    display: block;
+}
+
+.deco-2 {
+    position: absolute;
+    left: 44.5px;
+    top: 0;
+    width: 75.5px;
+    height: 52px;
+    display: block;
+}
+
+/* Logos */
+.fv-logos {
+    position: absolute;
+    left: 50%;
+    top: 404px;
+    width: 360px;
+    height: 80px;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.fv-logo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+/* Logo positions - evenly distributed with 72px spacing */
+.fv-logo[data-logo-index="0"] {
+    left: 0;
+}
+
+.fv-logo[data-logo-index="1"] {
+    left: 72px;
+}
+
+.fv-logo[data-logo-index="2"] {
+    left: 144px;
+}
+
+.fv-logo[data-logo-index="3"] {
+    left: 216px;
+}
+
+.fv-logo[data-logo-index="4"] {
+    left: 288px;
+}
+
+/* Large state - active logo (grows upward and centered) */
+.fv-logo.fv-logo-large {
+    width: 80px;
+    height: 80px;
+}
+
+.fv-logo[data-logo-index="0"].fv-logo-large {
+    left: -10px;
+}
+
+.fv-logo[data-logo-index="1"].fv-logo-large {
+    left: 62px;
+}
+
+.fv-logo[data-logo-index="2"].fv-logo-large {
+    left: 134px;
+}
+
+.fv-logo[data-logo-index="3"].fv-logo-large {
+    left: 206px;
+}
+
+.fv-logo[data-logo-index="4"].fv-logo-large {
+    left: 278px;
+}
+
+.fv-logo.fv-logo-large .logo-circle {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.logo-circle img {
+    display: none;
+}
+
+.logo-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =====================================
+   Hamburger Menu
+   ===================================== */
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-shadow: -6px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.hamburger-menu.active {
+    right: 0;
+}
+
+/* Close Button */
+.hamburger-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #00B1B2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.hamburger-close-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 2px;
+}
+
+.hamburger-close-icon span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: #FFFFFF;
+    display: block;
+}
+
+.hamburger-close-icon span:first-child {
+    transform: translateY(-50%) rotate(20deg);
+}
+
+.hamburger-close-icon span:last-child {
+    transform: translateY(-50%) rotate(-20deg);
+}
+
+.hamburger-close-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.36px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* CTA Button */
+.hamburger-cta {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 60px;
+}
+
+.hamburger-cta-btn {
+    width: 100%;
+    height: 100%;
+    background-color: #EA5414;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-decoration: none;
+    padding: 0 10px 0 20px;
+}
+
+.hamburger-cta-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.hamburger-cta-icon > img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hamburger-cta-arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+}
+
+.hamburger-cta-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hamburger-cta-btn > span {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.45px;
+    line-height: 1.2;
+}
+
+/* Navigation */
+.hamburger-nav {
+    margin-top: 114px;
+    padding: 0 20px;
+}
+
+.hamburger-nav-item {
+    position: relative;
+    padding: 17px 0 16px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid #C8C8C8;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.hamburger-nav-item:last-child {
+    border-bottom: 1px solid #C8C8C8;
+}
+
+.nav-item-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 9px;
+    font-style: normal;
+    color: #EA5414;
+    letter-spacing: 0.9px;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.nav-item-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    margin: 0;
+}
+
+/* Overlay for background */
+.hamburger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    display: none;
+}
+
+.hamburger-overlay.active {
+    display: block;
+}
+
+/* =====================================
+   Charm Section
+   ===================================== */
+.charm-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 0 0 0;
+}
+
+/* Section Header */
+.charm-header {
+    position: relative;
+    width: 100%;
+    height: 86px;
+    margin-bottom: 0;
+}
+
+.charm-title-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.charm-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    font-style: normal;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.charm-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+}
+
+/* Left and Right Icons */
+.charm-icon {
+    position: absolute;
+    top: 15px;
+    width: 47.99px;
+    height: 68.122px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.charm-icon-left {
+    left: 40px;
+}
+
+.charm-icon-left img {
+    width: 15px;
+    height: 70px;
+    transform: rotate(330deg);
+}
+
+.charm-icon-right {
+    right: 40px;
+}
+
+.charm-icon-right img {
+    width: 15px;
+    height: 70px;
+    transform: rotate(30deg);
+}
+
+/* Three Images */
+.charm-images {
+    display: flex;
+    width: 100%;
+    height: 102px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.charm-image-item {
+    height: 102px;
+    flex: 1;
+}
+
+.charm-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* Feature Cards */
+.charm-features {
+    position: relative;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.charm-card {
+    position: relative;
+    width: 330px;
+    height: 210px;
+    margin-bottom: 20px;
+}
+
+.charm-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.charm-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.charm-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 36px 15px 0 15px;
+}
+
+.charm-card-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.54px;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+}
+
+.charm-card-title p {
+    margin: 0;
+    white-space: normal;
+}
+
+.charm-card-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 2;
+    text-align: left;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* =====================================
+   CTA Section
+   ===================================== */
+.cta-section {
+    position: relative;
+    width: 100%;
+    height: 224px;
+    margin: 40px 0;
+}
+
+/* Background */
+.cta-background {
+    position: absolute;
+    left: 0;
+    top: 29px;
+    width: 100%;
+    height: 195px;
+}
+
+.cta-bg-white {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.cta-bg-pattern {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.06;
+}
+
+.cta-bg-pattern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* Content */
+.cta-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+/* Top Text and Decoration */
+.cta-top {
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+}
+
+.cta-top-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.48px;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 60px;
+    margin: 0;
+}
+
+.cta-top-text p {
+    margin: 0;
+}
+
+.cta-top-decoration {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 31px;
+    z-index: -1;
+}
+
+.cta-top-decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CTA Button Container */
+.cta-button-container {
+    position: relative;
+    width: 340px;
+    height: 90px;
+    margin: 34px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border: 5px solid #00B1B2;
+    border-radius: 15px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.cta-button {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 320px;
+    height: 70px;
+    background-color: #EA5414;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) translateY(-2px) !important;
+}
+
+.cta-button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* CTA Icon */
+.cta-icon {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.cta-icon-circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+}
+
+.cta-icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cta-icon-arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.cta-icon-arrow-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cta-icon-arrow-svg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cta-icon-arrow-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #EA5414;
+}
+
+/* CTA Button Text */
+.cta-button-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.54px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* =====================================
+   Shop List Section
+   ===================================== */
+.shop-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Section Header */
+.shop-header {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.shop-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    font-style: normal;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+}
+
+.shop-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Header Decorations */
+.shop-deco-pot {
+    position: absolute;
+    right: 40px;
+    top: 145px;
+    width: 80px;
+    height: 88px;
+    display: block;
+}
+
+.shop-deco-pot img:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 70.428px;
+}
+
+.shop-deco-pot-bottom {
+    position: absolute;
+    left: 18.6px;
+    top: 74.89px;
+    width: 43.932px;
+    height: 17.112px;
+}
+
+.shop-deco-star {
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.shop-deco-star img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shop-header-badge {
+    display: none;
+}
+
+/* Description Text */
+.shop-description {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+    width: 245px;
+}
+
+.shop-description p {
+    margin: 0;
+}
+
+/* Shop Cards Container */
+.shop-cards {
+    padding: 0 10px;
+}
+
+/* Shop Card */
+.shop-card {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 20px;
+}
+
+.shop-card-orange {
+    height: 498px;
+}
+
+.shop-card-green {
+    height: 524px;
+}
+
+.shop-card-border {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    height: calc(100% - 10px);
+    background-color: #FFFFFF;
+    border: 4px solid #EA5414;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.shop-border-green {
+    border-color: #00B1B2;
+}
+
+/* Day Badge */
+.shop-day-badge {
+    position: absolute;
+    left: -15px;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.shop-day-circle {
+    width: 100%;
+    height: 100%;
+}
+
+.shop-day-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shop-day-badge span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* Card Content */
+.shop-card-content {
+    position: relative;
+    padding: 30px 20px 0 20px;
+    z-index: 5;
+}
+
+/* Card Logo Section */
+.shop-card-logo {
+    position: absolute;
+    left: 47px;
+    top: 40px;
+    width: 51px;
+    height: 90px;
+}
+
+.shop-card-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shop-logo-hatsukoi {
+    left: 79px;
+    top: 50px;
+    width: 182.582px;
+    height: 30px;
+}
+
+.shop-logo-kisuke {
+    left: 61px;
+    width: 48px;
+}
+
+.shop-logo-gavial {
+    left: 121px;
+    top: 40px;
+    width: 99px;
+    height: 45px;
+}
+
+.shop-logo-yamyam {
+    left: 30px;
+    top: 65px;
+    width: 74px;
+    height: 45px;
+}
+
+/* Card Divider */
+.shop-card-divider {
+    position: absolute;
+    left: 118px;
+    top: 40px;
+    width: 2px;
+    height: 90px;
+    background: #EA5414;
+}
+
+
+
+.shop-divider-horizontal {
+    left: 20px;
+    top: 100px;
+    width: 300px;
+    height: 2px;
+    background: #00B1B2;
+}
+
+
+/* Card Info */
+.shop-card-info {
+    position: absolute;
+    left: 138px;
+    top: 45px;
+}
+
+.shop-info-center {
+    left: 43px;
+    top: 112px;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.shop-card-badge-icon {
+    width: 40px;
+    height: 26px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.shop-card-badge-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-card-name {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 1.2px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.shop-card-name .shop-name-prefix {
+    font-size: 12px;
+}
+
+.shop-card-name .shop-name-main {
+    font-size: 16px;
+}
+
+.shop-card-name .shop-name-location {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.shop-name-inline .shop-name-location {
+    font-size: 12px;
+}
+
+/* Card Text */
+.shop-card-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    padding-top: 122px;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* Card Image */
+.shop-card-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 238px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    box-sizing: border-box;
+}
+
+.shop-card-orange .shop-card-image {
+    border-color: #EA5414;
+}
+
+.shop-card-green .shop-card-image {
+    border-color: #00B1B2;
+}
+
+.shop-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* Bottom Logos */
+.shop-logos {
+    position: relative;
+    width: 100%;
+    height: 229px;
+    margin: 40px 0 20px;
+    padding: 0;
+}
+
+.shop-logo-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.shop-logo-circle:nth-child(1) {
+    left: 90px;
+    top: 0;
+}
+
+.shop-logo-circle:nth-child(2) {
+    left: 200px;
+    top: 0;
+}
+
+.shop-logo-circle:nth-child(3) {
+    left: 30px;
+    top: 115px;
+}
+
+.shop-logo-circle:nth-child(4) {
+    left: 140px;
+    top: 115px;
+}
+
+.shop-logo-circle:nth-child(5) {
+    left: 250px;
+    top: 115px;
+}
+
+.shop-logo-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shop-logo-bg img {
+    display: none;
+}
+
+.shop-logo-img,
+.shop-logo-main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-30px, -30px);
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.shop-logo-img img,
+.shop-logo-main img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.shop-logo-badge {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.badge-circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.badge-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18.4px;
+    height: 18.4px;
+    object-fit: cover;
+}
+
+/* Footer Note */
+.shop-note {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.36px;
+    line-height: 1.9;
+    padding: 0 20px;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* =====================================
+   About Us Section
+   ===================================== */
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Section Header */
+.about-header {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 39px;
+    padding: 0;
+}
+
+.about-title-wrapper {
+    position: relative;
+    text-align: center;
+    padding: 0 35px;
+}
+
+.about-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+.about-deco-left {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 30px;
+    height: 35px;
+}
+
+.about-deco-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-deco-right {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    width: 30px;
+    height: 35px;
+    transform: rotate(180deg) scaleY(-1);
+}
+
+.about-deco-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Content Cards */
+.about-content {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.about-card {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 20px;
+}
+
+.about-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Card Image */
+.about-card-image {
+    position: relative;
+    width: 340px;
+    height: 202px;
+    margin: 0 0 15px 0;
+}
+
+.about-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-card-border {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 330px;
+    height: 192px;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Card Text */
+.about-card-heading {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.about-card-heading p {
+    margin: 0;
+}
+
+.about-card-description {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.about-card-description p {
+    margin: 0;
+}
+
+/* Card Icons */
+.about-card-icon {
+    position: absolute;
+    right: 20px;
+    top: 217px;
+    width: 75px;
+    height: 45px;
+}
+
+.about-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-icon-left {
+    left: 0;
+    right: auto;
+    width: 80px;
+    height: 50px;
+}
+
+.about-icon-multi {
+    width: 35px;
+    height: 55px;
+}
+
+.about-icon-multi .icon-1 {
+    position: absolute;
+    left: 1.17px;
+    top: 37.96px;
+    width: 33.826px;
+    height: 17.037px;
+}
+
+.about-icon-multi .icon-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32.891px;
+    height: 19.16px;
+}
+
+.about-icon-multi .icon-3 {
+    position: absolute;
+    left: 1.46px;
+    top: 23.78px;
+    width: 33.268px;
+    height: 18.226px;
+}
+
+/* =====================================
+   Clients Section
+   ===================================== */
+.clients-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Section Header */
+.clients-header {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.clients-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+    text-align: center;
+}
+
+.clients-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+/* Company Logos */
+.clients-logos {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 80px 0;
+}
+
+.clients-logos-track {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    animation: slide-mobile 20s linear infinite;
+}
+
+.clients-logos-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide-mobile {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100px * 5 - 10px * 5));
+    }
+}
+
+.client-logo-card {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.client-logo-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Interview Section */
+.interview-section {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.interview-header {
+    position: absolute;
+    left: 30px;
+    top: -26px;
+    width: auto;
+    margin: 0;
+    z-index: 10;
+}
+
+.interview-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    color: #00B1B2;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+}
+
+.interview-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 0;
+    background: #FFFFFF;
+    padding: 0 10px 10px 0;
+}
+
+/* Interview Card */
+.interview-card {
+    position: relative;
+    width: 340px;
+    height: 761px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.interview-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 25px;
+    background: #FFFFFF;
+    border-top-left-radius: 10px;
+    z-index: 5;
+}
+
+.interview-heading {
+    position: absolute;
+    left: 20px;
+    top: 35px;
+    width: 300px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0.9px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.interview-heading p {
+    margin: 0;
+}
+
+.interview-text {
+    position: absolute;
+    left: 20px;
+    top: 108px;
+    width: 300px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.interview-text p {
+    margin: 0;
+}
+
+.interview-image {
+    position: absolute;
+    left: 0;
+    top: 453px;
+    width: 332px;
+    height: 204px;
+    overflow: hidden;
+}
+
+.interview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interview-divider {
+    display: none;
+}
+
+.interview-company {
+    position: absolute;
+    left: 20px;
+    top: 672px;
+    width: 300px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.interview-company p:first-child {
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.36px;
+    margin: 0 0 11px 0;
+}
+
+.interview-company p:last-child {
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+/* Decorative Cup Icons */
+.interview-deco-top {
+    position: absolute;
+    right: 67.85px;
+    top: -45px;
+    width: 43.6px;
+    height: 15.2px;
+    z-index: 10;
+}
+
+.interview-deco-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.interview-deco-bottom-left {
+    position: absolute;
+    right: 93.62px;
+    top: -20px;
+    width: 35.62px;
+    height: 36px;
+    z-index: 5;
+}
+
+.interview-deco-bottom-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.interview-deco-bottom-right {
+    position: absolute;
+    right: 49.62px;
+    top: -20px;
+    width: 35.616px;
+    height: 35.997px;
+    z-index: 5;
+}
+
+.interview-deco-bottom-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =====================================
+   Innovation Section
+   ===================================== */
+.innovation-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Section Header */
+.innovation-header {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.innovation-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+    text-align: center;
+}
+
+.innovation-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+/* Background Image */
+.innovation-background {
+    width: 380px;
+    height: 180px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.innovation-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Innovation Cards */
+.innovation-card {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 15px;
+    background: #FFFFFF;
+    border: 4px solid;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.innovation-card:last-child {
+    margin-bottom: 0;
+}
+
+.innovation-card-green {
+    border-color: #00B1B2;
+    height: 334px;
+}
+
+.innovation-card-orange {
+    border-color: #EA5414;
+    height: 284px;
+}
+
+.innovation-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.innovation-card-left {
+    position: relative;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.innovation-icon {
+    width: 65px;
+    height: 30px;
+    margin: 0 auto 5px;
+}
+
+.innovation-card-orange .innovation-icon {
+    width: 80px;
+    margin: 5px auto 0;
+}
+
+.innovation-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.innovation-card-heading {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0.9px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+}
+
+.innovation-card-heading p {
+    margin: 0;
+}
+
+.innovation-card-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.innovation-card-text p {
+    margin: 0 0 10px 0;
+}
+
+.innovation-card-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Showroom Section
+   ===================================== */
+.showroom-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section Header */
+.showroom-header {
+    position: relative;
+    width: 100%;
+    margin: 0 0 26px 0;
+    order: 1;
+}
+
+.showroom-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+}
+
+.showroom-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Content Area */
+.showroom-content {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    order: 2;
+}
+
+.showroom-heading {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.8px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+.showroom-heading p {
+    margin: 0;
+}
+
+.showroom-description {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    width: 340px;
+    margin: 0 0 30px 0;
+}
+
+.showroom-description p {
+    margin: 0;
+}
+
+/* Showroom Image */
+.showroom-image {
+    width: 380px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+    order: 3;
+}
+
+.showroom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Decorative Icons */
+.showroom-icon {
+    position: absolute;
+    z-index: 5;
+}
+
+.showroom-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.showroom-icon-pot {
+    right: 40px;
+    top: -34px;
+    width: 75px;
+    height: 100px;
+}
+
+.showroom-icon-spoon {
+    right: 120px;
+    top: -26px;
+    width: 15px;
+    height: 45px;
+    transform: rotate(330deg);
+}
+
+.showroom-icon-heart {
+    right: 95px;
+    top: -33px;
+    width: 15.055px;
+    height: 13.685px;
+}
+
+/* =====================================
+   FAQ Section
+   ===================================== */
+.faq-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Section Header */
+.faq-header {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 39px;
+    text-align: center;
+}
+
+.faq-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+    text-align: center;
+}
+
+.faq-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+/* Decorative Icons */
+.faq-deco-left {
+    position: absolute;
+    left: 90px;
+    top: 54px;
+    width: 30px;
+    height: 35px;
+}
+
+.faq-deco-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.faq-deco-right {
+    position: absolute;
+    right: 90px;
+    top: 54px;
+    width: 30px;
+    height: 35px;
+    transform: rotate(180deg) scaleY(-1);
+}
+
+.faq-deco-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* FAQ Items */
+.faq-items {
+    width: 100%;
+    padding: 0;
+}
+
+.faq-item {
+    margin: 0 0 15px 0;
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item-card {
+    position: relative;
+    width: 340px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 2px solid #00B1B2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.faq-item-open {
+    height: 165px;
+    border-color: #EA5414;
+}
+
+/* Question */
+.faq-question {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 18px 15px;
+    cursor: pointer;
+}
+
+.faq-q-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 2px;
+    line-height: 0.8;
+    margin: 0 16px 0 0;
+    flex-shrink: 0;
+}
+
+.faq-q-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0.75px;
+    line-height: 1.5;
+    margin: -2px 20px 0 0;
+    flex: 1;
+}
+
+/* Toggle Button */
+.faq-toggle {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-toggle-line {
+    position: absolute;
+    background: #00B1B2;
+}
+
+.faq-item-open .faq-toggle-line {
+    background: #EA5414;
+}
+
+.faq-toggle-line-h {
+    width: 15px;
+    height: 3px;
+}
+
+.faq-toggle-line-v {
+    width: 3px;
+    height: 15px;
+}
+
+.faq-item-open .faq-toggle-line-v {
+    display: none;
+}
+
+/* Answer */
+.faq-answer {
+    display: none;
+    padding: 0 15px 18px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #EA5414;
+    letter-spacing: 0.39px;
+    line-height: 1.9;
+    min-height: 100px;
+}
+
+.faq-item-open .faq-answer {
+    display: block;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* =====================================
+   Company Section
+   ===================================== */
+.company-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.company-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Left Column */
+.company-left {
+    position: relative;
+    width: 340px;
+    margin: 0 auto 30px;
+    box-sizing: border-box;
+}
+
+/* Section Header */
+.company-header {
+    position: relative;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.company-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+}
+
+.company-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Illustration */
+.company-illustration {
+    position: absolute;
+    right: 0;
+    top: -24px;
+    width: 120px;
+    height: 90px;
+}
+
+.company-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Right Column */
+.company-right {
+    position: relative;
+    width: 340px;
+    margin: 0 auto;
+}
+
+/* Company Info Items */
+.company-info-item {
+    margin: 15px 0 0 0;
+}
+
+.company-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.company-info-row {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+}
+
+.company-info-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.65px;
+    line-height: 23.4px;
+    margin: 0;
+    width: 70px;
+    flex-shrink: 0;
+}
+
+.company-info-value {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.65px;
+    line-height: 23.4px;
+    margin: 0;
+    width: 270px;
+    text-align: left;
+}
+
+.company-info-value p {
+    margin: 0;
+    line-height: 23.4px;
+}
+
+.company-info-divider {
+    position: relative;
+    width: 340px;
+    height: 1px;
+    background: silver;
+    margin: 0 auto;
+}
+
+.company-info-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 70px;
+    height: 2px;
+    background: #000;
+    opacity: 5;
+}
+
+/* =====================================
+   Footer Section
+   ===================================== */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 767px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.footer-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Footer Logo */
+.footer-logo {
+    position: absolute;
+    left: 50px;
+    top: 60px;
+    width: 280px;
+    height: 70px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Footer Left Section */
+.footer-left {
+    position: relative;
+}
+
+/* Company Box */
+.footer-company-box {
+    position: absolute;
+    left: 20px;
+    top: 170px;
+    width: 340px;
+    height: 154px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.company-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.company-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #00B1B2;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    margin: 0 0 8px 0;
+}
+
+.company-name {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+}
+
+.company-address {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    line-height: 1.6;
+}
+
+.company-address p {
+    margin: 0;
+}
+
+/* Footer Right Section */
+.footer-right {
+    position: relative;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    position: absolute;
+    left: 30px;
+    top: 354px;
+}
+
+.footer-nav-column {
+    position: relative;
+}
+
+.footer-nav-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav-column li {
+    position: relative;
+    height: 39px;
+}
+
+.nav-divider {
+    position: absolute;
+    left: -2px;
+    top: 12px;
+    width: 10px;
+    height: 2px;
+    background: #00B1B2;
+}
+
+.nav-divider img {
+    display: none;
+}
+
+.footer-nav-column a {
+    display: inline-block;
+    padding-left: 16px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0.65px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+    position: absolute;
+    left: 50%;
+    top: 713px;
+    transform: translateX(-50%);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    color: #EA5414;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+}
+
+/* =====================================
+   Download Page Styles
+   ===================================== */
+.download-header-section {
+    max-width: 380px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.form-section {
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+/* Resource Icon */
+.resource-icon {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    width: 150px;
+    height: 90px;
+}
+
+.resource-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
