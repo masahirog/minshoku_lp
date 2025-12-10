@@ -204,7 +204,7 @@ button {
 .fv-background {
     position: absolute;
     left: 20%;
-    top: 120px;
+    top: 20px;
     width: 100%;
     max-width: 1200px;
     height: 73%;
@@ -232,33 +232,68 @@ button {
 /* Left Content */
 .fv-left-content {
     position: absolute;
-    left: -5%;
-    top: 36%;
+    left: -80px;
+    top: 220px;
     z-index: 10;
+    transform-origin: top left;
+    transform: scale(1);
+}
+
+@media (max-width: 1400px) {
+    .fv-left-content {
+        transform: scale(0.85);
+        left: -60px;
+        top: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fv-left-content {
+        transform: scale(0.7);
+        left: -40px;
+        top: 180px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .fv-left-content {
+        transform: scale(0.6);
+        left: -20px;
+        top: 160px;
+    }
+}
+
+@media (max-width: 800px) {
+    .fv-left-content {
+        transform: scale(0.5);
+        left: 0;
+        top: 140px;
+    }
 }
 
 /* Decorations */
 .fv-decorations {
     position: absolute;
-    left: 14%;
-    top: clamp(-30px, -2vw, 0);
-    width: clamp(180px, 22vw, 370px);
-    height: clamp(87px, 10.7vw, 180px);
+    left: 130px;
+    top: -92px;
+    width: 370px;
+    height: 200px;
     z-index: 20;
+    pointer-events: none;
 }
 
 .fv-decorations .deco-1 {
     position: absolute;
-    left: 14vw;
-    top: 11px;
+    left: 100px;
+    top: 180px;
     width: 168px;
     height: 169px;
 }
 
 .fv-decorations .deco-2 {
     position: absolute;
-    left: 20vw;
-    top: 0;
+    left: 200px;
+    top: 160px;
     width: 151px;
     height: 104px;
 }
@@ -267,25 +302,26 @@ button {
 .fv-contents-bg {
     position: absolute;
     left: 0;
-    top: 26px;
-    width: 48vw;
-    max-width: 720px;
-    height: auto;
-    aspect-ratio: 720 / 480;
+    top: 100px;
+    width: 720px;
+    height: 480px;
+    z-index: 5;
 }
 
 .fv-contents-bg img {
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 /* Text Content */
 .fv-text {
     position: absolute;
-    left: 20.8%;
-    top: 45%;
+    left: 150px;
+    top: 216px;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     color: #000000;
+    z-index: 15;
 }
 
 .fv-text p {
@@ -295,8 +331,8 @@ button {
 
 .fv-text-1 {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 30px;
+    top: 60px;
     font-size: 0;
     letter-spacing: 1.2px;
     line-height: 1.2;
@@ -306,7 +342,7 @@ button {
 .text-bold-large {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 900;
-    font-size: clamp(28px, 3.2vw, 48px);
+    font-size: 48px;
     font-style: normal;
     letter-spacing: 1.44px;
     line-height: 1.2;
@@ -316,7 +352,7 @@ button {
 .text-medium {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: clamp(22px, 2.4vw, 36px);
+    font-size: 36px;
     font-style: normal;
     letter-spacing: 1.08px;
     line-height: 1.2;
@@ -325,10 +361,10 @@ button {
 
 .fv-text-2 {
     position: absolute;
-    left: 4.2%;
-    top: 16.25%;
+    left: 60px;
+    top: 138px;
     font-weight: 700;
-    font-size: clamp(22px, 2.4vw, 36px);
+    font-size: 36px;
     font-style: normal;
     letter-spacing: 1.08px;
     line-height: 1.2;
@@ -337,10 +373,10 @@ button {
 
 .fv-text-3 {
     position: absolute;
-    left: 8.3%;
-    top: 29.4%;
+    left: 80px;
+    top: 201px;
     font-weight: 700;
-    font-size: clamp(22px, 2.4vw, 36px);
+    font-size: 36px;
     font-style: normal;
     letter-spacing: 1.08px;
     line-height: 1.2;
@@ -352,7 +388,7 @@ button {
     position: absolute;
     left: 70%;
     transform: translateX(-50%);
-    top: 650px;
+    top: 530px;
     width: clamp(300px, 50vw, 750px);
     z-index: 15;
 }
@@ -565,7 +601,8 @@ button {
     position: relative;
     width: 100%;
     height: 194px;
-    margin-bottom: 45px;
+    margin-bottom: -30px;
+    z-index: 20;
 }
 
 .charm-title-wrapper {
@@ -601,13 +638,14 @@ button {
 
 .charm-icon {
     position: absolute;
-    width: 95.981px;
-    height: 136.244px;
-    top: 58px;
+    width: 30px;
+    height: 140px;
+    top: 70px;
+    z-index: 30;
 }
 
 .charm-icon-left {
-    left: 400px 
+    left: 429px;
 }
 
 .charm-icon-left img {
@@ -615,11 +653,12 @@ button {
     height: 140px;
     transform: rotate(330deg);
     transform-origin: center;
+    display: block;
 }
 
 .charm-icon-right {
     left: auto;
-    right: 350px 
+    right: 434px;
 }
 
 .charm-icon-right img {
@@ -627,7 +666,46 @@ button {
     height: 140px;
     transform: rotate(30deg);
     transform-origin: center;
+    display: block;
 }
+
+/* Responsive adjustments for charm icons */
+@media (max-width: 1400px) {
+    .charm-icon-left {
+        left: 350px;
+    }
+    .charm-icon-right {
+        right: 360px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .charm-icon-left {
+        left: 280px;
+    }
+    .charm-icon-right {
+        right: 290px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .charm-icon-left {
+        left: 200px;
+    }
+    .charm-icon-right {
+        right: 210px;
+    }
+}
+
+@media (max-width: 800px) {
+    .charm-icon-left {
+        left: 200px;
+    }
+    .charm-icon-right {
+        right: 110px;
+    }
+}
+
 
 /* Three Images */
 .charm-images {
@@ -762,7 +840,7 @@ button {
 .cta-background {
     position: absolute;
     left: 0;
-    top: 70px;
+    top: 42px;
     width: 100%;
     bottom: 0;
 }
@@ -966,7 +1044,8 @@ button {
 /* Section Header */
 .shop-header {
     position: relative;
-    margin-bottom: 129px;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
     z-index: 100;
 }
 
@@ -979,7 +1058,7 @@ button {
     letter-spacing: 2.4px;
     line-height: 1.2;
     margin: 0 0 34px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .shop-title {
@@ -990,8 +1069,8 @@ button {
     color: #000000;
     letter-spacing: 2.3px;
     line-height: 1.2;
-    margin: 0;
-    text-align: center;
+    margin: 0 0 0 0;
+    text-align: left;
 }
 
 /* Header Decorations */
@@ -1000,8 +1079,8 @@ button {
 }
 
 .shop-deco-pot {
-    right: 200px;
-    top: 24px;
+    right: 230px;
+    top: 23px;
     width: 200px;
     height: 230px;
 }
@@ -1022,7 +1101,7 @@ button {
 }
 
 .shop-deco-star {
-    right: 500px;
+    right: 40%;
     top: 0;
     width: 70px;
     height: 70px;
@@ -1077,7 +1156,8 @@ button {
     color: #000000;
     letter-spacing: 0.54px;
     line-height: 2;
-    margin: 0 0 62px 151px;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
 }
 
 .shop-description p {
@@ -1096,7 +1176,7 @@ button {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    min-height: 350px;
+    min-height: 420px;
     margin: 0 auto 40px auto;
 }
 
@@ -1394,13 +1474,24 @@ button {
     position: absolute;
     left: 0;
     top: 0;
-    width: 32%;
-    height: 32%;
+    width: 70px;
+    height: 70px;
 }
 
-.shop-logo-badge img {
+.shop-logo-badge .badge-circle {
+    position: absolute;
     width: 100%;
     height: 100%;
+    object-fit: contain;
+}
+
+.shop-logo-badge .badge-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 49.417px;
+    height: 32.2px;
     object-fit: contain;
 }
 
@@ -1442,8 +1533,9 @@ button {
 .about-header {
     position: relative;
     width: 100%;
+    max-width: 1200px;
     height: 128px;
-    margin-bottom: 159px;
+    margin: 0 auto 80px auto;
 }
 
 .about-title-wrapper {
@@ -1479,8 +1571,8 @@ button {
 
 .about-deco-left {
     position: absolute;
-    left: 418px;
-    top: 19px;
+    left: calc((100% / 2) - 330px);
+    top: 50px;
     width: 60px;
     height: 70px;
 }
@@ -1493,8 +1585,8 @@ button {
 
 .about-deco-right {
     position: absolute;
-    right: 418px;
-    top: 19px;
+    right: calc((100% / 2) - 330px);
+    top: 50px;
     width: 60px;
     height: 70px;
     transform: rotate(180deg) scaleY(-1);
@@ -1607,14 +1699,15 @@ button {
 
 .about-card-icon {
     position: absolute;
-    right: 180px;
+    right: 8.3%;
     top: 68px;
     width: 150px;
     height: 90px;
+    z-index: 10;
 }
 
 .about-icon-left {
-    left: 278px;
+    left: 25.5%;
     right: auto;
     top: 68px;
     width: 160px;
@@ -1622,7 +1715,7 @@ button {
 }
 
 .about-icon-multi {
-    right: 244px;
+    right: 8.3%;
     top: 48px;
     width: 70px;
     height: 110px;
@@ -1664,14 +1757,14 @@ button {
 .clients-section {
     position: relative;
     width: 100%;
-    max-width: 1500px;
-    margin: 100px auto 0;
+    padding: 20px 0;
+    margin: 100px 0 0 0;
 }
 
 /* Section Header */
 .clients-header {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .clients-subtitle {
@@ -1702,16 +1795,34 @@ button {
 .clients-logos {
     position: relative;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    overflow: hidden;
     margin-bottom: 100px;
 }
 
+.clients-logos-track {
+    display: flex;
+    padding: 100px;
+    gap: 30px;
+    animation: slide 20s linear infinite;
+}
+
+.clients-logos-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-233px * 5 - 30px * 5));
+    }
+}
+
 .client-logo-card {
-    width: 100%;
-    max-width: 280px;
-    aspect-ratio: 1 / 1;
+    width: 233px;
+    height: 233px;
+    flex-shrink: 0;
     background-color: #ffffff;
     border-radius: 20px;
     display: flex;
@@ -2406,7 +2517,7 @@ button {
 .company-section {
     width: 100%;
     background: white;
-    padding: 100px 0 150px 0;
+    padding: 100px 0 50px 0;
 }
 
 .company-container {
@@ -2795,20 +2906,23 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
+    padding-left: 22px;
+}
+
+.footer-nav-column li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 2px;
+    background-color: #00B1B2;
 }
 
 .nav-divider {
-    width: 12px;
-    height: 2px;
-    flex-shrink: 0;
-    display: block;
-}
-
-.nav-divider img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    display: block;
+    display: none;
 }
 
 .footer-nav-column li a {
@@ -2903,15 +3017,6 @@ button {
 
     .charm-card-4 {
         right: 100px;
-    }
-
-    .charm-icon-left {
-        left: 280px;
-    }
-
-    .charm-icon-right {
-        left: auto;
-        right: 240px;
     }
 
     /* Interview Section */
@@ -3042,18 +3147,7 @@ button {
         top: auto !important;
     }
 
-    .charm-icon-left{
-        left: 200px;
-    }
-    .charm-icon-right {
-        right: 150px;
-    }
-
     /* Shop Section */
-    .shop-deco-pot,
-    .shop-deco-star {
-        display: none;
-    }
 
     .shop-cards {
         gap: 30px;
@@ -3074,6 +3168,34 @@ button {
         gap: 30px;
     }
 
+    .about-deco-left {
+        width: 50px;
+        height: 58px;
+    }
+
+    .about-deco-right {
+        width: 50px;
+        height: 58px;
+    }
+
+    .about-card-icon {
+        width: 120px;
+        height: 72px;
+        right: 8%;
+    }
+
+    .about-icon-left {
+        width: 128px;
+        height: 80px;
+        left: 15%;
+    }
+
+    .about-icon-multi {
+        width: 56px;
+        height: 88px;
+        right: 12%;
+    }
+
     /* Clients Section */
     .clients-logos {
         gap: 30px;
@@ -3086,7 +3208,7 @@ button {
 
     /* Company Section */
     .company-section {
-        padding: 100px 40px 150px 40px;
+        padding: 100px 40px 50px 40px;
     }
 
     .company-container {
