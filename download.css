@@ -1,0 +1,658 @@
+/* Download Page Specific Styles */
+
+/* Download Main */
+.download-main {
+    width: 100%;
+    background-color: #F7F7F7;
+}
+
+/* Download Header Section */
+.download-header-section {
+    width: 100%;
+    padding: 80px 20px 40px 20px;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+.download-page-title {
+    margin-bottom: 40px;
+}
+
+.download-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+    color: #EA5414;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.download-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 46px;
+    font-weight: 900;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 2.3px;
+}
+
+.download-intro {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 2;
+    letter-spacing: 0.54px;
+}
+
+.download-intro p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .download-header-section {
+        padding: 60px 20px 30px 20px;
+    }
+
+    .download-subtitle {
+        font-size: 20px;
+    }
+
+    .download-title {
+        font-size: 32px;
+    }
+
+    .download-intro {
+        font-size: 16px;
+    }
+}
+
+/* Resource Preview Section */
+.resource-preview-section {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.resource-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 50px;
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+}
+
+.resource-left {
+    flex: 0 0 440px;
+    position: relative;
+}
+
+.resource-images {
+    position: relative;
+    height: 340px;
+}
+
+.resource-image {
+    position: absolute;
+    width: 402px;
+    height: 216px;
+    border: 2px solid #C8C8C8;
+}
+
+.resource-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.resource-image-center {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.resource-image-left {
+    left: 0;
+    top: 29px;
+    transform: rotate(-13deg);
+    z-index: 1;
+}
+
+.resource-image-right {
+    right: 0;
+    top: 29px;
+    transform: rotate(13deg);
+    z-index: 2;
+}
+
+.resource-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.resource-description {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 2;
+    letter-spacing: 0.54px;
+    margin-bottom: 30px;
+}
+
+.resource-description p {
+    margin: 0;
+}
+
+.resource-details {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.resource-details-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.resource-header-line {
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(180deg, #EA5414 0%, #EA5414 50%, #00B1B2 50%, #00B1B2 100%);
+    flex-shrink: 0;
+}
+
+.resource-details-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 0.6px;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 0.54px;
+}
+
+.resource-list li {
+    padding-left: 27px;
+    position: relative;
+    line-height: 1.8;
+}
+
+.resource-list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+}
+
+.resource-icon {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 200px;
+    height: 120px;
+}
+
+.resource-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.resource-contact {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.resource-contact p {
+    margin: 0;
+}
+
+.contact-phone {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.48px;
+}
+
+.contact-hours {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}
+
+@media (max-width: 1200px) {
+    .resource-container {
+        padding: 0 50px;
+        gap: 50px;
+    }
+
+    .resource-left {
+        flex: 0 0 350px;
+    }
+
+    .resource-images {
+        height: 280px;
+    }
+
+    .resource-image {
+        width: 320px;
+        height: 172px;
+    }
+}
+
+@media (max-width: 992px) {
+    .resource-container {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .resource-left {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .resource-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .resource-preview-section {
+        padding: 60px 0;
+    }
+
+    .resource-container {
+        padding: 0 20px;
+    }
+
+    .resource-images {
+        height: 240px;
+    }
+
+    .resource-image {
+        width: 280px;
+        height: 150px;
+    }
+
+    .resource-icon {
+        position: static;
+        width: 150px;
+        height: 90px;
+        margin: 20px auto 0;
+    }
+}
+
+/* Form Section */
+.form-section {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: #F7F7F7;
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-header-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-divider-line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.form-divider-line > div {
+    width: 100%;
+    height: 100%;
+    outline: 3px black solid;
+    outline-offset: -1.50px;
+}
+
+.form-divider-line img {
+    display: none;
+}
+
+.form-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.form-header > div {
+    background-color: #F7F7F7;
+    padding: 5px 20px;
+    display: inline-flex;
+}
+
+.form-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #000000;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 0.84px;
+    text-align: center;
+    background-color: #F7F7F7;
+    padding: 0;
+}
+
+.form-title span {
+    font-weight: 700;
+}
+
+.form-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    margin: 0 0 40px 0;
+    line-height: 1;
+    letter-spacing: 0.54px;
+}
+
+/* Form Styles */
+.download-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.form-group-textarea {
+    margin-bottom: 40px;
+}
+
+.form-label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    flex-shrink: 0;
+}
+
+.form-group label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.required-badge,
+.optional-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    height: 30px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.required-badge .badge-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #EA5414;
+    border-radius: 3px;
+}
+
+.optional-badge .badge-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #00B1B2;
+    border-radius: 3px;
+}
+
+.required-badge .badge-text,
+.optional-badge .badge-text {
+    position: relative;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.3;
+    letter-spacing: 0.9px;
+    text-align: center;
+    z-index: 1;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 70%;
+    padding: 18px 20px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid #C8C8C8;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    letter-spacing: 0.9px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: 0.9px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00B1B2;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 280px;
+    line-height: 1.6;
+}
+
+/* Checkbox */
+.form-checkbox {
+    margin: 50px 0 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #C8C8C8;
+    border-radius: 3px;
+    position: relative;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #00B1B2;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.checkbox-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+/* Submit Button */
+.form-submit {
+    text-align: center;
+    margin: 60px 0 30px 0;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 23px 70px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: 1.2;
+    letter-spacing: 2.4px;
+}
+
+.submit-button:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Form Notice */
+.form-notice {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.42px;
+    margin-top: 40px;
+}
+
+.form-notice p {
+    margin: 0;
+}
+
+.privacy-link {
+    color: #00B1B2;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.privacy-link:hover {
+    color: #008F90;
+}
+
+@media (max-width: 992px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-label-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        padding: 80px 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .form-subtitle {
+        font-size: 16px;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group textarea {
+        font-size: 16px;
+        padding: 15px 18px;
+    }
+
+    .checkbox-text {
+        font-size: 16px;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+
+    .form-notice {
+        font-size: 12px;
+    }
+}
