@@ -1,0 +1,1961 @@
+/* =====================================
+   Reset & Base Styles
+   ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* =====================================
+   Header Styles
+   ===================================== */
+.header {
+    height: 75px;
+    background-color: #ffffff;
+    position: relative;
+    margin: 22px auto 0 auto;
+    padding-bottom: 22px;
+    max-width: 1440px;
+}
+
+.header-container {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    padding: 0 30px;
+}
+
+.header-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 75px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.header-tagline {
+    position: absolute;
+    left: 330px;
+    top: 14px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.45px;
+    color: #000000;
+}
+
+.header-tagline p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.header-cta {
+    position: absolute;
+    left: 1000px;
+    top: 8px;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 300px;
+    height: 60px;
+    background-color: #ea5414;
+    border-radius: 8px;
+    padding: 0 25px;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    line-height: 1.2;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download span {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.btn-download:hover {
+    background-color: #d14912;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.icon-download-svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.header-menu {
+    position: absolute;
+    left: 1320px;
+    top: 8px;
+}
+
+.btn-menu {
+    width: 60px;
+    height: 60px;
+    background-color: #00b1b2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-menu:hover {
+    background-color: #009899;
+}
+
+.menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-lines span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.menu-text {
+    font-weight: 900;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0.42px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* =====================================
+   Main Content
+   ===================================== */
+.main-content {
+    position: relative;
+}
+
+/* =====================================
+   FV Section
+   ===================================== */
+.fv-section {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* Background Image */
+.fv-background {
+    position: absolute;
+    left: 300px;
+    top: 120px;
+    width: 1200px;
+    height: 660px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 100px;
+    overflow: hidden;
+}
+
+.fv-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* Left Content */
+.fv-left-content {
+    position: absolute;
+    left: -80px;
+    top: 328px;
+    z-index: 10;
+}
+
+/* Decorations */
+.fv-decorations {
+    position: absolute;
+    left: 210px;
+    top: 0;
+    width: 370px;
+    height: 180px;
+    z-index: 20;
+}
+
+.fv-decorations .deco-1 {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 168px;
+    height: 169px;
+}
+
+.fv-decorations .deco-2 {
+    position: absolute;
+    left: 89px;
+    top: 0;
+    width: 151px;
+    height: 104px;
+}
+
+/* Contents Background */
+.fv-contents-bg {
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 720px;
+    height: 480px;
+}
+
+.fv-contents-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Text Content */
+.fv-text {
+    position: absolute;
+    left: 150px;
+    top: 216px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #000000;
+}
+
+.fv-text p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.fv-text-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.text-bold-large {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    font-style: normal;
+    letter-spacing: 1.44px;
+    line-height: 1.2;
+    display: inline;
+}
+
+.text-medium {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    font-style: normal;
+    letter-spacing: 1.08px;
+    line-height: 1.2;
+    display: inline;
+}
+
+.fv-text-2 {
+    position: absolute;
+    left: 30px;
+    top: 78px;
+    font-weight: 700;
+    font-size: 36px;
+    font-style: normal;
+    letter-spacing: 1.08px;
+    line-height: 43.20px;
+    white-space: nowrap;
+}
+
+.fv-text-3 {
+    position: absolute;
+    left: 60px;
+    top: 141px;
+    font-weight: 700;
+    font-size: 36px;
+    font-style: normal;
+    letter-spacing: 1.08px;
+    line-height: 43.20px;
+    white-space: nowrap;
+}
+
+/* Store Logos */
+.fv-logos {
+    position: absolute;
+    left: 680px;
+    top: 650px;
+    z-index: 15;
+}
+
+.fv-logo {
+    position: absolute;
+}
+
+/* Logo 1 - Large (サツマ) */
+.fv-logo-large {
+    left: 0;
+    top: 0;
+}
+
+.fv-logo-large .logo-circle {
+    width: 180px;
+    height: 180px;
+}
+
+.fv-logo-large .logo-image-1 {
+    position: absolute;
+    width: 80px;
+    height: 142px;
+    left: 50px;
+    top: 19px;
+}
+
+/* Logo 2 (カオマンガイ) */
+.fv-logo:nth-child(2) {
+    left: 210px;
+    top: 60px;
+}
+
+.fv-logo:nth-child(2) .logo-circle {
+    width: 120px;
+    height: 120px;
+}
+
+.fv-logo:nth-child(2) .logo-image-2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+}
+
+/* Logo 3 (グレピー) */
+.fv-logo:nth-child(3) {
+    left: 360px;
+    top: 60px;
+}
+
+.fv-logo:nth-child(3) .logo-circle {
+    width: 120px;
+    height: 120px;
+}
+
+.fv-logo:nth-child(3) .logo-image-3 {
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    left: 10px;
+    top: 44px;
+}
+
+/* Logo 4 (マンダラ) */
+.fv-logo:nth-child(4) {
+    left: 510px;
+    top: 60px;
+}
+
+.fv-logo:nth-child(4) .logo-circle {
+    width: 120px;
+    height: 120px;
+}
+
+.fv-logo:nth-child(4) .logo-image-4 {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    left: 20px;
+    top: 25px;
+}
+
+/* Logo 5 (ヤムヤム) */
+.fv-logo:nth-child(5) {
+    left: 660px;
+    top: 60px;
+}
+
+.fv-logo:nth-child(5) .logo-circle {
+    width: 120px;
+    height: 120px;
+}
+
+.fv-logo:nth-child(5) .logo-image-5 {
+    position: absolute;
+    width: 80px;
+    height: 48px;
+    left: 20px;
+    top: 36px;
+}
+
+.logo-circle {
+    position: relative;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* =====================================
+   Charm Section
+   ===================================== */
+.charm-section {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 104px;
+}
+
+/* Section Header */
+.charm-header {
+    position: relative;
+    width: 100%;
+    height: 194px;
+    margin-bottom: 45px;
+}
+
+.charm-title-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.charm-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: normal;
+    color: #ea5414;
+    letter-spacing: 2.4px;
+    line-height: 1.2;
+    margin: 0 0 34px 0;
+}
+
+.charm-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 2.3px;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.charm-icon {
+    position: absolute;
+    width: 95.981px;
+    height: 136.244px;
+    top: 58px;
+}
+
+.charm-icon-left {
+    left: 418.63px;
+}
+
+.charm-icon-left img {
+    width: 30px;
+    height: 140px;
+    transform: rotate(330deg);
+    transform-origin: center;
+}
+
+.charm-icon-right {
+    left: 984.63px;
+}
+
+.charm-icon-right img {
+    width: 30px;
+    height: 140px;
+    transform: rotate(30deg);
+    transform-origin: center;
+}
+
+/* Three Images */
+.charm-images {
+    position: relative;
+    left: 0;
+    width: 1500px;
+    height: 400px;
+    display: flex;
+    margin-top: 0;
+}
+
+.charm-image-item {
+    width: 500px;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+.charm-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: block;
+}
+
+/* Feature Cards Container */
+.charm-features {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    margin-top: 60px;
+}
+
+/* Individual Cards */
+.charm-card {
+    position: absolute;
+    width: 540px;
+}
+
+.charm-card-1 {
+    left: 153px;
+    top: 0;
+}
+
+.charm-card-2 {
+    left: 800px;
+    top: 0;
+}
+
+.charm-card-3 {
+    left: 153px;
+    top: 330px;
+}
+
+.charm-card-4 {
+    left: 800px;
+    top: 330px;
+}
+
+.charm-card-bg {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 440px;
+    height: 280px;
+    z-index: 1;
+}
+
+.charm-card-bg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.charm-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.charm-card-title {
+    font-family: 'Zen Kaku_Gothic_New', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.84px;
+    line-height: 1.4;
+    text-align: center;
+    margin: 34px 0 0 0;
+    white-space: nowrap;
+}
+
+.charm-card-title p {
+    margin: 0;
+}
+
+.charm-card-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.6px;
+    line-height: 40px;
+    margin: 0;
+    width: 540px;
+    word-wrap: break-word;
+}
+
+/* =====================================
+   CTA Section
+   ===================================== */
+.cta-section {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: 343px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+/* Background */
+.cta-background {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 273px;
+}
+
+.cta-bg-white {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 273px;
+    background-color: #ffffff;
+}
+
+.cta-bg-pattern {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 273px;
+    opacity: 0.06;
+}
+
+.cta-bg-pattern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: block;
+}
+
+/* Content */
+.cta-content {
+    position: absolute;
+    left: 380px;
+    top: 0;
+    width: 740px;
+}
+
+/* Top Text */
+.cta-top {
+    position: relative;
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+.cta-top-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.78px;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.cta-top-text p {
+    margin: 0;
+}
+
+.cta-top-decoration {
+    position: absolute;
+    left: 90px;
+    top: 22px;
+    width: 560px;
+    height: 60px;
+}
+
+.cta-top-decoration img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Button Container */
+.cta-button-container {
+    position: relative;
+    width: 740px;
+    height: 160px;
+}
+
+.cta-button-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 740px;
+    height: 160px;
+    background-color: #ffffff;
+    border: 10px solid #00b1b2;
+    border-radius: 30px;
+}
+
+.cta-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 700px;
+    height: 120px;
+    background-color: #ea5414;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #d14912;
+}
+
+.cta-button-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icon */
+.cta-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.cta-icon-circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.cta-icon-circle img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cta-icon-arrow {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.cta-icon-arrow-svg {
+    position: absolute;
+    left: 4px;
+    top: 0;
+    width: 32px;
+    height: 28px;
+}
+
+.cta-icon-arrow-svg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cta-icon-arrow-bar {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    width: 40px;
+    height: 6px;
+    background-color: #ea5414;
+}
+
+/* Button Text */
+.cta-button-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    color: #ffffff;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* =====================================
+   Shop List Section
+   ===================================== */
+.shop-section {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 100px auto 0;
+}
+
+/* Section Header */
+.shop-header {
+    position: relative;
+    margin-bottom: 129px;
+}
+
+.shop-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: normal;
+    color: #ea5414;
+    letter-spacing: 2.4px;
+    line-height: 1.2;
+    margin: 0 0 34px 151px;
+}
+
+.shop-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 2.3px;
+    line-height: 1.2;
+    margin: 0 0 0 151px;
+}
+
+/* Header Decorations */
+.shop-header-deco {
+    position: absolute;
+}
+
+.shop-deco-pot {
+    left: 1094px;
+    top: 24px;
+    width: 200px;
+    height: 230px;
+}
+
+.shop-deco-pot img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 176px;
+}
+
+.shop-deco-pot-bottom {
+    top: 187px !important;
+    left: 46.5px !important;
+    width: 109.831px !important;
+    height: 42.78px !important;
+}
+
+.shop-deco-star {
+    left: 792px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.shop-deco-star img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.shop-header-badge {
+    position: absolute;
+    right: 170px;
+    top: 727px;
+    width: 100px;
+    height: 100px;
+}
+
+.shop-badge-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.shop-badge-circle img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.shop-badge-icon {
+    position: absolute;
+    left: 15px;
+    top: 27px;
+    width: 70px;
+    height: 46px;
+}
+
+.shop-badge-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Description Text */
+.shop-description {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.54px;
+    line-height: 2;
+    margin: 0 0 62px 151px;
+}
+
+.shop-description p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Shop Cards */
+.shop-cards {
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.shop-card {
+    position: relative;
+    width: 1200px;
+    height: 418px;
+    margin: 0 auto 40px 120px;
+}
+
+.shop-card-border {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 1200px;
+    height: 418px;
+    background-color: #ffffff;
+    border: 8px solid #ea5414;
+    border-radius: 30px;
+}
+
+.shop-border-green {
+    border-color: #00b1b2;
+}
+
+.shop-card-image {
+    position: absolute;
+    left: 630px;
+    top: 20px;
+    width: 600px;
+    height: 418px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 8px solid #ea5414;
+    border-left: none;
+    overflow: hidden;
+}
+
+.shop-card-green .shop-card-image {
+    border-color: #00b1b2;
+}
+
+.shop-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: block;
+}
+
+/* Day Badge */
+.shop-day-badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+}
+
+.shop-day-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.shop-day-circle img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.shop-day-badge span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: normal;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Card Content */
+.shop-card-content {
+    position: absolute;
+    left: 70px;
+    top: 60px;
+    width: 520px;
+    height: 330px;
+}
+
+.shop-card-logo {
+    position: absolute;
+    left: 53px;
+    top: 0;
+    width: 101px;
+    height: 180px;
+}
+
+.shop-card-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shop-logo-hatsukoi {
+    position: absolute;
+    left: 50%;
+    top: 28px;
+    transform: translateX(-50%);
+    width: 365px;
+    height: 60px;
+}
+
+.shop-logo-kisuke {
+    position: absolute;
+    left: 75px;
+    top: 0;
+    width: 96px;
+    height: 180px;
+}
+
+.shop-logo-gavial {
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    transform: translateX(-50%);
+    width: 198px;
+    height: 90px;
+}
+
+.shop-logo-yamyam {
+    position: absolute;
+    left: 33px;
+    top: 47px;
+    width: 149px;
+    height: 90px;
+}
+
+.shop-card-divider {
+    position: absolute;
+    left: 204px;
+    top: 0;
+    width: 2px;
+    height: 180px;
+}
+
+.shop-divider-horizontal {
+    position: absolute;
+    left: 0;
+    top: 118px;
+    width: 520px;
+    height: 2px;
+}
+
+.shop-card-divider img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.shop-card-info {
+    position: absolute;
+    left: 244px;
+    top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.shop-info-center {
+    left: 68px;
+    top: 133px;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop-card-badge-icon {
+    width: 80px;
+    height: 52px;
+}
+
+.shop-card-badge-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-card-name {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 1.2px;
+    line-height: 48px;
+    margin: 0;
+}
+
+.shop-name-inline {
+    display: inline;
+    white-space: nowrap;
+}
+
+.shop-name-inline .shop-name-main,
+.shop-name-inline .shop-name-location {
+    display: inline;
+}
+
+.shop-name-prefix {
+    font-size: 18px;
+    font-weight: 900;
+    display: block;
+}
+
+.shop-name-main {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+}
+
+.shop-name-location {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.9px;
+}
+
+.shop-card-text {
+    position: absolute;
+    left: 0;
+    top: 210px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.48px;
+    line-height: 2;
+    margin: 0;
+    width: 520px;
+}
+
+/* Bottom Logos */
+.shop-logos {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    margin: 0 0 60px 150px;
+}
+
+.shop-logo-circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-right: 25px;
+}
+
+.shop-logo-bg {
+    position: absolute;
+    width: 226px;
+    height: 232px;
+    top: 0;
+    left: -3px;
+}
+
+.shop-logo-bg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.shop-logo-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+}
+
+.shop-logo-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.shop-logo-badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.shop-logo-badge img {
+    width: 49.417px;
+    height: 32.2px;
+    margin: 18.2px 10.3px;
+}
+
+.shop-logo-main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shop-logo-main img {
+    display: block;
+}
+
+/* Footer Note */
+.shop-note {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.48px;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto 100px;
+}
+
+/* =====================================
+   About Us Section
+   ===================================== */
+.about-section {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 100px auto 0;
+}
+
+/* Section Header */
+.about-header {
+    position: relative;
+    width: 100%;
+    height: 128px;
+    margin-bottom: 159px;
+}
+
+.about-title-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.about-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: normal;
+    color: #ea5414;
+    letter-spacing: 2.4px;
+    line-height: 1.2;
+    margin: 0 0 34px 0;
+}
+
+.about-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 2.3px;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.about-deco-left {
+    position: absolute;
+    left: 418px;
+    top: 19px;
+    width: 60px;
+    height: 70px;
+}
+
+.about-deco-left img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-deco-right {
+    position: absolute;
+    right: 418px;
+    top: 19px;
+    width: 60px;
+    height: 70px;
+    transform: rotate(180deg) scaleY(-1);
+}
+
+.about-deco-right img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Content Cards */
+.about-content {
+    position: relative;
+    width: 100%;
+}
+
+.about-card {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    margin-bottom: 60px;
+}
+
+.about-card-left {
+    padding-left: 60px;
+}
+
+.about-card-right {
+    padding-left: 150px;
+}
+
+.about-card-image {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 740px;
+    height: 440px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.about-image-right {
+    left: 550px;
+}
+
+.about-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: block;
+}
+
+.about-card-border {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 710px;
+    height: 410px;
+    border: 6px solid #ffffff;
+    border-radius: 30px;
+}
+
+.about-card-text {
+    position: absolute;
+    left: 790px;
+    top: 72px;
+    width: 500px;
+}
+
+.about-text-left {
+    left: 0;
+    top: 90px;
+}
+
+.about-card-heading {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 1.6px;
+    line-height: 1.5;
+    margin: 0 0 44px 0;
+}
+
+.about-card-heading p {
+    margin: 0;
+}
+
+.about-card-description {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.9px;
+    line-height: 2;
+}
+
+.about-card-description p {
+    margin: 0;
+}
+
+.about-card-icon {
+    position: absolute;
+    right: 180px;
+    top: 68px;
+    width: 150px;
+    height: 90px;
+}
+
+.about-icon-left {
+    left: 278px;
+    right: auto;
+    top: 68px;
+    width: 160px;
+    height: 100px;
+}
+
+.about-icon-multi {
+    right: 244px;
+    top: 48px;
+    width: 70px;
+    height: 110px;
+}
+
+.about-card-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-icon-multi .icon-1 {
+    position: absolute;
+    left: 2.35px;
+    top: 75.93px;
+    width: 67.652px;
+    height: 34.074px;
+}
+
+.about-icon-multi .icon-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 65.782px;
+    height: 38.319px;
+}
+
+.about-icon-multi .icon-3 {
+    position: absolute;
+    left: 2.91px;
+    top: 47.56px;
+    width: 66.535px;
+    height: 36.452px;
+}
+
+/* =====================================
+   Clients Section
+   ===================================== */
+.clients-section {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 100px auto 0;
+}
+
+/* Section Header */
+.clients-header {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.clients-subtitle {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: normal;
+    color: #ea5414;
+    letter-spacing: 2.4px;
+    line-height: 1.2;
+    margin: 0 0 34px 0;
+    text-align: center;
+}
+
+.clients-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 2.3px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+/* Company Logos */
+.clients-logos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.client-logo-card {
+    width: 280px;
+    height: 280px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo-card img {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Interview Section */
+.interview-section {
+    position: relative;
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto 100px;
+    padding: 0 170px;
+}
+
+.interview-header {
+    position: relative;
+    margin: 0 0 0 0px;
+    text-align: left;
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 0 20px 0 0;
+    display: inline-block;
+}
+
+.interview-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: normal;
+    color: #00b1b2;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    margin: 0 0 8px 0;
+    background-color: #ffffff;
+}
+
+.interview-title {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* Interview Card */
+.interview-card {
+    position: relative;
+    width: 1200px;
+    min-height: 680px;
+    margin: -35px auto 0;
+    background-color: #ffffff;
+    border: 8px solid #000000;
+    border-radius: 30px;
+}
+
+.interview-image {
+    position: absolute;
+    left: -50px;
+    top: 168px;
+    width: 550px;
+    height: 330px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.interview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: block;
+}
+
+.interview-heading {
+    position: absolute;
+    left: 60px;
+    top: 70px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.interview-text {
+    position: absolute;
+    left: 540px;
+    top: 168px;
+    width: 610px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.9px;
+    line-height: 2;
+}
+
+.interview-text p {
+    margin: 0;
+}
+
+.interview-divider {
+    position: absolute;
+    left: 60px;
+    bottom: 100px;
+    width: 1080px;
+    height: 1px;
+    background-color: #C8C8C8;
+}
+
+.interview-company {
+    position: absolute;
+    left: 60px;
+    bottom: 30px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0.48px;
+    line-height: 1.6;
+}
+
+.interview-company p {
+    margin: 0;
+}
+
+.interview-company p:first-child {
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.interview-company p:last-child {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+}
+
+/* Decorative Cup Icons */
+.interview-deco-top {
+    position: absolute;
+    right: 140px;
+    top: -25px;
+    width: 109px;
+    height: 38px;
+}
+
+.interview-deco-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.interview-deco-bottom-left {
+    position: absolute;
+    right: 200px;
+    top: 25px;
+    width: 89.05px;
+    height: 90px;
+}
+
+.interview-deco-bottom-left img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.interview-deco-bottom-right {
+    position: absolute;
+    right: 90px;
+    top: 25px;
+    width: 89.039px;
+    height: 89.993px;
+}
+
+.interview-deco-bottom-right img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* =====================================
+   Footer Styles
+   ===================================== */
+.footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    position: relative;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.footer-logo {
+    width: 360px;
+    height: 90px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.footer-company-box {
+    width: 440px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.company-box-inner {
+    width: 100%;
+}
+
+.company-label {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    font-style: normal;
+    color: #00b1b2;
+    letter-spacing: 0.75px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.company-name {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.company-address {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: normal;
+    color: #ffffff;
+    letter-spacing: 0.75px;
+    line-height: 1.6;
+}
+
+.company-address p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-nav-column {
+    display: flex;
+}
+
+.footer-nav-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-nav-column li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-divider {
+    width: 12px;
+    height: 2px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.nav-divider img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+.footer-nav-column li a {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: 0.75px;
+    line-height: 1.2;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-nav-column li a:hover {
+    color: #00b1b2;
+}
+
+.footer-copyright {
+    font-weight: 900;
+    font-size: 15px;
+    color: #ea5414;
+    letter-spacing: 0.75px;
+    line-height: 1.2;
+    text-align: right;
+    margin-top: 30px;
+}
+
+/* =====================================
+   Responsive Design (準備)
+   ===================================== */
+@media (max-width: 1440px) {
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .footer-container {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    /* モバイル版は別途実装予定 */
+}
