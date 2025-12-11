@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "みんなの社食 - 閲覧には認証が必要です"
+AuthUserFile /home/xs202000/minshoku.jp/public_html/lp02/.htpasswd
+Require valid-user

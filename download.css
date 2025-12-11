@@ -223,6 +223,7 @@
 }
 
 .resource-contact p {
+    display: inline;
     margin: 0;
 }
 
@@ -236,6 +237,7 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.48px;
+    margin-left: 5px;
 }
 
 @media (max-width: 1200px) {

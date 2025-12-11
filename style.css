@@ -12,8 +12,11 @@ body {
     color: #000000;
     line-height: 1.6;
     background-color: #ffffff;
-    max-width: 1500px;
-    margin: 0 auto;
+    margin: 0;
+}
+
+html {
+    scroll-padding-top: 130px;
 }
 
 img {
@@ -42,18 +45,21 @@ button {
    Header Styles
    ===================================== */
 .header {
-    height: 75px;
     background-color: #ffffff;
-    position: relative;
-    margin: 22px auto 0 auto;
-    padding-bottom: 22px;
-    max-width: 1500px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 22px 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
     width: 100%;
     margin: 0 auto;
-    height: 100%;
+    height: 75px;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -188,6 +194,7 @@ button {
    ===================================== */
 .main-content {
     position: relative;
+    padding-top: 119px;
 }
 
 /* =====================================
@@ -241,39 +248,33 @@ button {
     transform: scale(1);
 }
 
-}
-
-}
-
-}
-
-}
-
 /* Decorations */
 .fv-decorations {
     position: absolute;
-    left: 130px;
-    top: -92px;
+    left: 210px;
+    top: 119px;
     width: 370px;
-    height: 200px;
+    height: 508px;
     z-index: 20;
     pointer-events: none;
 }
 
 .fv-decorations .deco-1 {
     position: absolute;
-    left: 100px;
-    top: 180px;
+    left: 50px;
+    top: -30px;
     width: 168px;
     height: 169px;
+    z-index: 2;
 }
 
 .fv-decorations .deco-2 {
     position: absolute;
-    left: 200px;
-    top: 160px;
+    left: 150px;
+    top: -40px;
     width: 151px;
     height: 104px;
+    z-index: 1;
 }
 
 /* Contents Background */
@@ -309,7 +310,7 @@ button {
 
 .fv-text-1 {
     position: absolute;
-    left: 30px;
+    left: 100px;
     top: 60px;
     font-size: 0;
     letter-spacing: 1.2px;
@@ -339,7 +340,7 @@ button {
 
 .fv-text-2 {
     position: absolute;
-    left: 60px;
+    left: 160px;
     top: 138px;
     font-weight: 700;
     font-size: 36px;
@@ -351,7 +352,7 @@ button {
 
 .fv-text-3 {
     position: absolute;
-    left: 80px;
+    left: 180px;
     top: 201px;
     font-weight: 700;
     font-size: 36px;
@@ -368,187 +369,98 @@ button {
     transform: translateX(-50%);
     top: 530px;
     width: 750px;
+    height: 180px;
     z-index: 15;
 }
 
 .fv-logo {
     position: absolute;
+    width: 120px;
+    height: 120px;
+    bottom: 0;
     transition: all 0.6s ease-in-out;
 }
 
-.fv-logo-large {
+/* Logo positions - evenly distributed */
+.fv-logo[data-logo-index="0"] {
+    left: 0;
+}
+
+.fv-logo[data-logo-index="1"] {
+    left: 150px;
+}
+
+.fv-logo[data-logo-index="2"] {
+    left: 300px;
+}
+
+.fv-logo[data-logo-index="3"] {
+    left: 450px;
+}
+
+.fv-logo[data-logo-index="4"] {
+    left: 600px;
+}
+
+/* Large state - active logo (grows and centered) */
+.fv-logo.fv-logo-large {
+    width: 180px;
+    height: 180px;
     z-index: 20;
 }
 
-/* Small circle (default) */
-.fv-logo .logo-circle {
-    width: 120px;
-    height: 120px;
-    opacity: 1;
-    transition: opacity 0.6s ease-in-out;
-}
-
-/* When logo becomes large - animate the circle */
-.fv-logo .logo-circle {
-    transition: all 0.6s ease-in-out;
-}
-
-.fv-logo-large .logo-circle {
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    bottom: calc((120px - 180px) / 2);
-    left: calc((120px - 180px) / 2);
-}
-
-/* Logo 1 positioning (サツマ) */
-.fv-logo[data-logo-index="0"] {
-    left: 4%;
-    top: 78px;
-}
-
-.fv-logo[data-logo-index="0"] .logo-image {
-    position: absolute;
-    width: 60px;
-    height: 106px;
-    left: 30px;
-    bottom: 12px;
-    transition: all 0.6s ease-in-out;
-    transform-origin: bottom center;
-}
-
 .fv-logo[data-logo-index="0"].fv-logo-large {
-    left: 4%;
-    top: 20px;
-}
-
-.fv-logo[data-logo-index="0"].fv-logo-large .logo-image {
-    width: 80px;
-    height: 142px;
-    left: 20px;
-    bottom: 0px;
-}
-
-/* Logo 2 positioning (カオマンガイ) */
-.fv-logo[data-logo-index="1"] {
-    left: 22%;
-    top: 78px;
-}
-
-.fv-logo[data-logo-index="1"] .logo-image {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    left: 20px;
-    bottom: 25px;
-    transition: all 0.6s ease-in-out;
-    transform-origin: bottom center;
+    left: -30px;
 }
 
 .fv-logo[data-logo-index="1"].fv-logo-large {
-    left: 22%;
-    top: 20px;
-}
-
-.fv-logo[data-logo-index="1"].fv-logo-large .logo-image {
-    width: 110px;
-    height: 110px;
-    left: 5px;
-    bottom: 10px;
-}
-
-/* Logo 3 positioning (マンダラ) */
-.fv-logo[data-logo-index="2"] {
-    left: 40%;
-    top: 78px;
-}
-
-.fv-logo[data-logo-index="2"] .logo-image {
-    position: absolute;
-    width: 80px;
-    height: 60px;
-    left: 20px;
-    bottom: 35px;
-    transition: all 0.6s ease-in-out;
-    transform-origin: bottom center;
+    left: 120px;
 }
 
 .fv-logo[data-logo-index="2"].fv-logo-large {
-    left: 40%;
-    top: 20px;
-}
-
-.fv-logo[data-logo-index="2"].fv-logo-large .logo-image {
-    width: 110px;
-    height: 82.5px;
-    left: 5px;
-    bottom: 30px;
-}
-
-/* Logo 4 positioning (グレピー) */
-.fv-logo[data-logo-index="3"] {
-    left: 58%;
-    top: 78px;
-}
-
-.fv-logo[data-logo-index="3"] .logo-image {
-    position: absolute;
-    width: 95px;
-    height: 30px;
-    left: 12.5px;
-    bottom: 50px;
-    transition: all 0.6s ease-in-out;
-    transform-origin: bottom center;
+    left: 270px;
 }
 
 .fv-logo[data-logo-index="3"].fv-logo-large {
-    left: 58%;
-    top: 20px;
-}
-
-.fv-logo[data-logo-index="3"].fv-logo-large .logo-image {
-    width: 130px;
-    height: 41.6px;
-    left: -5px;
-    bottom: 45px;
-}
-
-/* Logo 5 positioning (ヤムヤム) */
-.fv-logo[data-logo-index="4"] {
-    left: 76%;
-    top: 78px;
-}
-
-.fv-logo[data-logo-index="4"] .logo-image {
-    position: absolute;
-    width: 80px;
-    height: 48px;
-    left: 20px;
-    bottom: 41px;
-    transition: all 0.6s ease-in-out;
-    transform-origin: bottom center;
+    left: 420px;
 }
 
 .fv-logo[data-logo-index="4"].fv-logo-large {
-    left: 76%;
-    top: 20px;
+    left: 570px;
 }
 
-.fv-logo[data-logo-index="4"].fv-logo-large .logo-image {
-    width: 110px;
-    height: 66px;
-    left: 5px;
-    bottom: 24px;
+.fv-logo.fv-logo-large .logo-circle {
+    width: 180px;
+    height: 180px;
 }
 
 .logo-circle {
     position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s ease-in-out;
 }
 
-.logo-circle img {
-    width: 100%;
-    height: 100%;
-    display: block;
+
+.logo-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    transition: all 0.6s ease-in-out;
+}
+
+.fv-subtext{
+    display: none;
 }
 
 /* =====================================
@@ -959,6 +871,7 @@ button {
     position: relative;
     max-width: 1500px;
     margin: 0 auto 20px auto;
+    padding-left: 48px;
     z-index: 100;
 }
 
@@ -992,7 +905,7 @@ button {
 }
 
 .shop-deco-pot {
-    right: 230px;
+    right: 200px;
     top: 23px;
     width: 200px;
     height: 230px;
@@ -1014,7 +927,7 @@ button {
 }
 
 .shop-deco-star {
-    right: 40%;
+    left: 700px;
     top: 0;
     width: 70px;
     height: 70px;
@@ -1071,6 +984,7 @@ button {
     line-height: 2;
     max-width: 1500px;
     margin: 0 auto 20px auto;
+    padding-left: 48px;
 }
 
 .shop-description p {
@@ -1225,8 +1139,9 @@ button {
     position: absolute;
     left: 39%;
     top: 0;
-    width: 2px;
+    width: 3px;
     height: 55%;
+    background-color: #EA5414;
 }
 
 .shop-divider-horizontal {
@@ -1235,12 +1150,14 @@ button {
     top: 36%;
     width: 100%;
     height: 2px;
+    background-color: #EA5414;
 }
 
-.shop-card-divider img {
-    width: 100%;
-    height: 100%;
-    display: block;
+
+/* Green cards divider */
+.shop-card-green .shop-card-divider,
+.shop-card-green .shop-divider-horizontal {
+    background-color: #00B1B2;
 }
 
 .shop-card-info {
@@ -2524,20 +2441,33 @@ button {
 }
 
 .company-info-value p {
+    display: inline;
     margin: 0;
 }
 
+.company-info-value p:first-child {
+    display: block;
+}
+
 .company-info-divider {
-    width: 100%;
-    height: 5px;
-    display: flex;
-    align-items: center;
+    position: relative;
+    width: 800px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.company-info-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -0.5px;
+    width: 140px;
+    height: 2px;
+    background: #000;
 }
 
 .company-info-divider img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+    display: none;
 }
 
 /* =====================================
@@ -2918,10 +2848,6 @@ button {
         padding: 0 100px;
     }
 
-    /* Footer */
-    .footer-container {
-        padding: 100px 50px;
-    }
 }
 
     .fv-background {

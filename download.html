@@ -116,8 +116,9 @@
                 <p class="download-subtitle" data-node-id="74:261">DOWNROAD</p>
                 <h1 class="download-title" data-node-id="74:260">サービス資料・料金表</h1>
             </div>
-            <div class="download-intro" data-node-id="74:263" style='text-align:left'>
-                <p>「みんなの社食」のサービス資料・料金表をダウンロードするには、以下のフォームから必要事項を入力して送信してください。</p>
+            <div class="download-intro" data-node-id="74:263">
+                <p>「みんなの社食」のサービス資料・料金表をダウンロードするには、</p>
+                <p>以下のフォームから必要事項を入力して送信してください。</p>
             </div>
         </section>
 
@@ -183,7 +184,7 @@
 
                 <p class="form-subtitle" data-node-id="89:308">入力後にメールにて資料を送付いたします</p>
 
-                <form class="download-form" id="downloadForm" data-node-id="74:364">
+                <form class="download-form" id="downloadForm" method="POST" action="form-submit.php" data-node-id="74:364">
                     <!-- Company Name -->
                     <div class="form-group" data-node-id="74:299">
                         <div class="form-label-wrapper">
@@ -368,21 +369,82 @@
                 });
             }
 
-            // Form submission
+            // Check for success/error messages
+            const urlParams = new URLSearchParams(window.location.search);
+            const success = urlParams.get('success');
+            const error = urlParams.get('error');
+
+            if (success === '1') {
+                showMessage('資料のダウンロードリンクをメールでお送りしました。ご確認ください。', 'success');
+                // Clear URL parameters
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } else if (error === '1') {
+                showMessage('送信中にエラーが発生しました。入力内容をご確認の上、再度お試しください。', 'error');
+            }
+
+            // Form submission with GA4 tracking
             const downloadForm = document.getElementById('downloadForm');
             if (downloadForm) {
                 downloadForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
+                    // GA4 event tracking
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submit', {
+                            'event_category': 'engagement',
+                            'event_label': 'download_form',
+                            'form_name': 'resource_download'
+                        });
+                    }
 
-                    // Here you would typically send the form data to your server
-                    // For now, we'll just show a success message
-                    alert('資料のダウンロードリンクをメールでお送りします。');
-
-                    // Reset form
-                    downloadForm.reset();
+                    // Form will submit normally to form-submit.php
                 });
             }
         });
+
+        // Show message function
+        function showMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'form-message form-message-' + type;
+            messageDiv.textContent = text;
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 150px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 20px 40px;
+                background-color: ${type === 'success' ? '#00B1B2' : '#EA5414'};
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                z-index: 10000;
+                max-width: 90%;
+                text-align: center;
+                animation: fadeInOut 5s ease-in-out;
+            `;
+
+            // Add animation keyframes
+            if (!document.querySelector('#messageAnimation')) {
+                const style = document.createElement('style');
+                style.id = 'messageAnimation';
+                style.textContent = `
+                    @keyframes fadeInOut {
+                        0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+                        10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+                        90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+                        100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(messageDiv);
+
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
     </script>
 </body>
 </html>

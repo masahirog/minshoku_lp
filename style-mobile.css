@@ -358,9 +358,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.logo-circle img {
-    display: none;
-}
 
 .logo-image {
     position: absolute;
