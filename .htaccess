@@ -1,4 +1,25 @@
+# Basic認証
 AuthType Basic
-AuthName "みんなの社食 - 閲覧には認証が必要です"
+AuthName "Restricted Area - Please Login"
 AuthUserFile /home/xs202000/minshoku.jp/public_html/lp02/.htpasswd
 Require valid-user
+
+# セキュリティヘッダー
+<IfModule mod_headers.c>
+    # XSS対策
+    Header set X-XSS-Protection "1; mode=block"
+    # クリックジャッキング対策
+    Header set X-Frame-Options "SAMEORIGIN"
+    # MIMEタイプスニッフィング対策
+    Header set X-Content-Type-Options "nosniff"
+    # Referrer情報の制御
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ディレクトリリスティング無効化
+Options -Indexes
+
+# .htpasswd等の保護
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>

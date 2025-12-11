@@ -16,14 +16,31 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// レート制限（スパム防止）- 60秒以内の再送信を防ぐ
+if (isset($_SESSION['last_submit_time'])) {
+    $time_diff = time() - $_SESSION['last_submit_time'];
+    if ($time_diff < 60) {
+        $_SESSION['form_errors'] = ['送信間隔が短すぎます。しばらく待ってから再度お試しください。'];
+        header('Location: download.html?error=1');
+        exit;
+    }
+}
+
 // 入力データの取得とサニタイズ
 function sanitize($data) {
     return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
 }
 
+// メールヘッダーインジェクション対策
+function sanitize_email($email) {
+    // 改行文字を除去
+    $email = str_replace(["\r", "\n", "%0a", "%0d"], '', $email);
+    return filter_var($email, FILTER_SANITIZE_EMAIL);
+}
+
 $company = sanitize($_POST['company'] ?? '');
 $name = sanitize($_POST['name'] ?? '');
-$email = sanitize($_POST['email'] ?? '');
+$email = sanitize_email($_POST['email'] ?? '');
 $phone = sanitize($_POST['phone'] ?? '');
 $question = sanitize($_POST['question'] ?? '');
 $privacy = isset($_POST['privacy']) ? true : false;
@@ -47,6 +64,8 @@ if (empty($email)) {
 
 if (empty($phone)) {
     $errors[] = '電話番号を入力してください。';
+} elseif (!preg_match('/^[0-9\-]+$/', $phone)) {
+    $errors[] = '電話番号は数字とハイフンのみで入力してください。';
 }
 
 if (!$privacy) {
@@ -84,13 +103,13 @@ $message .= "\n送信日時：" . date('Y年m月d日 H:i:s') . "\n";
 // メールヘッダー
 $headers = "From: masahiro.yamashita@minshoku.jp\r\n"; // 送信元メールアドレスを設定
 $headers .= "Reply-To: {$email}\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-// メール送信
+// メール送信（mb_send_mailが自動的に件名と本文をISO-2022-JPでエンコード）
 $mail_sent = mb_send_mail($to, $subject, $message, $headers);
 
 // ユーザーへの自動返信メール
 $user_subject = '【みんなの社食】資料ダウンロードのお申込みありがとうございます';
+
 $user_message = "{$name} 様\n\n";
 $user_message .= "この度は「みんなの社食」の資料をご請求いただき、誠にありがとうございます。\n\n";
 $user_message .= "ご登録いただいたメールアドレス宛に、資料をお送りいたします。\n";
@@ -113,13 +132,14 @@ $user_message .= "TEL：03-4500-1355\n";
 $user_message .= "受付時間：平日10:00～18:00\n";
 
 $user_headers = "From: masahiro.yamashita@minshoku.jp\r\n";
-$user_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
+// メール送信（mb_send_mailが自動的に件名と本文をISO-2022-JPでエンコード）
 mb_send_mail($email, $user_subject, $user_message, $user_headers);
 
 // 成功時はサンクスページへ
 if ($mail_sent) {
     $_SESSION['form_success'] = true;
+    $_SESSION['last_submit_time'] = time(); // レート制限用のタイムスタンプを記録
     header('Location: download.html?success=1');
 } else {
     $_SESSION['form_errors'] = ['メール送信に失敗しました。しばらく時間をおいて再度お試しください。'];
